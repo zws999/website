@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5T Services/Shop</title>
+    <style>
+        body {
+            background-color: #1a1b26;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header {
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(to bottom, #2a2b3a, #1a1b26);
+        }
+        .header img {
+            width: 100px;
+            border-radius: 10px;
+        }
+        .header h1 {
+            font-size: 2em;
+            margin: 10px 0;
+        }
+        .header p {
+            font-size: 1em;
+            color: #a0a0a0;
+        }
+        .subscribe-button {
+            background-color: #00ff99;
+            color: #000;
+            padding: 5px 10px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.8em;
+        }
+        .plans {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+        .card {
+            background-color: #2a2b3a;
+            border-radius: 20px;
+            width: 250px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .card h2 {
+            font-size: 1.5em;
+        }
+        .card p {
+            color: #a0a0a0;
+        }
+        .price {
+            font-size: 1.2em;
+            color: #00ff99;
+        }
+        .subscribe-btn {
+            background-color: #00ff99;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            display: block;
+            margin: 10px auto;
+        }
+        .perks {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+        .perks li {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+        .perks li::before {
+            content: "✔";
+            color: #00ff99;
+            margin-right: 10px;
+        }
+        .exclusive-role {
+            color: #ffaa00;
+            font-weight: bold;
+        }
+        .soon {
+            color: #ffd700;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="data:image/png;base64,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" alt="5T Logo">
+        <h1>5T Services/Shop</h1>
+        <p>Subscribe and support</p>
+        <p>Get access to membership perks of 5T Services/Shop</p>
+    </div>
+    <div class="plans">
+        <div class="card">
+            <img src="data:image/png;base64,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" alt="Pro Member Icon">
+            <h2>Pro Member</h2>
+            <p>Join the squad.</p>
+            <div class="price">from $3.99 USD / month</div>
+            <a href="https://discord.gg/CRFPEbnmX6" class="subscribe-btn">Subscribe</a>
+            <ul class="perks">
+                <li class="exclusive-role">VIP</li>
+                <li>Unlock VIP access on our Discord server</li>
+                <li>Access to PRO chat and trading</li>
+                <li>Special color roles</li>
+            </ul>
+        </div>
+        <div class="card">
+            <img src="data:image/png;base64,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" alt="Pro Member+ Icon">
+            <h2>Pro Member+</h2>
+            <p>Everything from VIP and more.</p>
+            <div class="price">from $5.59 USD / month</div>
+            <a href="https://discord.gg/CRFPEbnmX6" class="subscribe-btn">Subscribe</a>
+            <ul class="perks">
+                <li class="exclusive-role">VIP+ VIP</li>
+                <li class="soon">[SOON] Advanced Bot</li>
+                <li>More data displayed on the bot.</li>
+                <li class="soon">[SOON] PREMIUM Site</li>
+                <li>No ads, quick search, etc. TBD.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <img src="data:image/png;base64,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" alt="Support 5T Icon">
+            <h2>Support 5T</h2>
+            <p>Become a donator and help our server and site keep running</p>
+            <div class="price">from $25.00 USD / month</div>
+            <a href="https://discord.gg/CRFPEbnmX6" class="subscribe-btn">Subscribe</a>
+            <ul class="perks">
+                <li class="exclusive-role">Super VIP VIP+ VIP</li>
+                <li>A Donator badge on the server</li>
+                <li>Eternal love from our team</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
