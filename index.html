@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5T Services/Shop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+            color: #ffffff;
+            font-family: 'Orbitron', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .header {
+            width: 100%;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+        }
+        .header img {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        .header p {
+            font-size: 1.2em;
+            color: #d0d0d0;
+            margin-top: 10px;
+        }
+        .plans {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 20px;
+            max-width: 1200px;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            width: 300px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .card h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .card p.description {
+            font-size: 1em;
+            color: #a0a0a0;
+            margin-bottom: 20px;
+        }
+        .price {
+            font-size: 1.5em;
+            color: #00ff99;
+            margin-bottom: 20px;
+        }
+        .subscribe-btn {
+            background: linear-gradient(45deg, #00ff99, #00cc77);
+            color: #000;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: opacity 0.3s;
+        }
+        .subscribe-btn:hover {
+            opacity: 0.8;
+        }
+        .perks {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            margin-top: 20px;
+        }
+        .perks li {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            font-size: 0.9em;
+        }
+        .perks li::before {
+            content: "✔";
+            color: #00ff99;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        .vip-section {
+            width: 100%;
+            max-width: 1200px;
+            padding: 40px 20px;
+            text-align: center;
+            background: url
